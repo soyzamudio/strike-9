@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>8C9F559D-EA5C-422D-AD7F-3F69034B8F48</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Strike 9</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>0497FFE211457557ADD95D3AD0CEFF70C88C6D44</key>
+		<string>github.com:soyzamudio/strike-9.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Strike 9.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>0497FFE211457557ADD95D3AD0CEFF70C88C6D44</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:soyzamudio/strike-9.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>0497FFE211457557ADD95D3AD0CEFF70C88C6D44</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>0497FFE211457557ADD95D3AD0CEFF70C88C6D44</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Strike%209</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -14,6 +14,8 @@ class ViewController: UIViewController {
 	var middleView:UIView = UIView()
 	var bottomView:UIView = UIView()
 	
+	var selectedNumbers:NSMutableArray = NSMutableArray()
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
@@ -76,8 +78,32 @@ class ViewController: UIViewController {
 	}
 	
 	func clickEvent(sender: AnyObject) {
+		var total = 10
 		var button: UIButton = sender as UIButton
-		println(button.tag)
+		button.enabled = false
+		button.backgroundColor = UIColor(red: 146/255, green: 176/255, blue: 185/255, alpha: 1)
+		button.layer.shadowColor = UIColor(red: 117/255, green: 141/255, blue: 148/255, alpha: 1).CGColor
+		selectedNumbers.insertObject(button.tag, atIndex: 0)
+		var sum = 0
+		for number in selectedNumbers {
+			sum += Int(number as NSNumber)
+		}
+		println("Sum: \(sum)")
+		if (sum == total) {
+			var alert:UIAlertView = UIAlertView(title: "YOU WON!", message: "You go the correct sum!", delegate: nil, cancelButtonTitle: "Ok")
+			alert.show()
+			restartGame()
+		}
+	}
+	
+	func restartGame() {
+		for number in selectedNumbers {
+			var button:UIButton = self.view.viewWithTag(Int(number as NSNumber)) as UIButton
+			button.enabled = true
+			button.backgroundColor = UIColor(red: 0/255, green: 192/255, blue: 252/255, alpha: 1)
+			button.layer.shadowColor = UIColor(red: 0/255, green: 144/255, blue: 163/255, alpha: 1).CGColor
+		}
+		selectedNumbers.removeAllObjects()
 	}
 }
 
