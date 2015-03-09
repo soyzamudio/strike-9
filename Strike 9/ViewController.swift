@@ -56,7 +56,7 @@ class ViewController: UIViewController {
 		getRandomButton = UIButton(frame: CGRectMake(15, 5, bottomView.frame.width - 30, bottomView.frame.height - 20))
 		getRandomButton.backgroundColor = UIColor(red: 255/255, green: 130/255, blue: 34/255, alpha: 1)
 		getRandomButton.setTitle("Roll the dice", forState: .Normal)
-		getRandomButton.titleLabel?.font = UIFont.boldSystemFontOfSize(18)
+		getRandomButton.titleLabel?.font = UIFont.boldSystemFontOfSize(24)
 		getRandomButton.layer.masksToBounds = false
 		getRandomButton.layer.shadowColor = UIColor(red: 191/255, green: 94/255, blue: 22/255, alpha: 1).CGColor
 		getRandomButton.layer.shadowOpacity = 1
@@ -209,7 +209,7 @@ class ViewController: UIViewController {
 		getRandomButton.backgroundColor = UIColor.whiteColor()
 		getRandomButton.layer.shadowColor = UIColor.lightGrayColor().CGColor
 		getRandomButton.setTitleColor(UIColor.darkGrayColor(), forState: .Normal)
-		getRandomButton.setTitle("\(firstNumber) + \(secondNumber) = \(total)", forState: .Normal)
+		getRandomButton.setTitle("\(total)", forState: .Normal)
 	}
 	
 }
