@@ -148,24 +148,26 @@ class ViewController: UIViewController {
 	}
 	
 	func clickEvent(sender: AnyObject) {
-		var button: UIButton = sender as UIButton
-		button.enabled = false
-		button.backgroundColor = UIColor(red: 146/255, green: 176/255, blue: 185/255, alpha: 1)
-		button.layer.shadowColor = UIColor(red: 117/255, green: 141/255, blue: 148/255, alpha: 1).CGColor
-		selectedNumbers.insertObject(button.tag, atIndex: 0)
-		var sum = 0
-		for number in selectedNumbers {
-			sum += Int(number as NSNumber)
-		}
-		screenTotal.text = String(sum)
-		if (sum == total) {
-			var alert:UIAlertView = UIAlertView(title: "YOU WON!", message: "You go the correct sum!", delegate: nil, cancelButtonTitle: "Ok")
-			alert.show()
-			restartGame()
-		} else if (sum > total) {
-			var alert:UIAlertView = UIAlertView(title: "YOU LOST!", message: "You went over the amount!", delegate: nil, cancelButtonTitle: "Ok")
-			alert.show()
-			restartGame()
+		if (total > 0) {
+			var button: UIButton = sender as UIButton
+			button.enabled = false
+			button.backgroundColor = UIColor(red: 146/255, green: 176/255, blue: 185/255, alpha: 1)
+			button.layer.shadowColor = UIColor(red: 117/255, green: 141/255, blue: 148/255, alpha: 1).CGColor
+			selectedNumbers.insertObject(button.tag, atIndex: 0)
+			var sum = 0
+			for number in selectedNumbers {
+				sum += Int(number as NSNumber)
+			}
+			screenTotal.text = String(sum)
+			if (sum == total) {
+				var alert:UIAlertView = UIAlertView(title: "YOU WON!", message: "You go the correct sum!", delegate: nil, cancelButtonTitle: "Ok")
+				alert.show()
+				restartGame()
+			} else if (sum > total) {
+				var alert:UIAlertView = UIAlertView(title: "YOU LOST!", message: "You went over the amount!", delegate: nil, cancelButtonTitle: "Ok")
+				alert.show()
+				restartGame()
+			}
 		}
 	}
 	
@@ -182,6 +184,7 @@ class ViewController: UIViewController {
 	}
 	
 	func restartGame() {
+		total = 0
 		for number in selectedNumbers {
 			var button:UIButton = self.view.viewWithTag(Int(number as NSNumber)) as UIButton
 			button.enabled = true
