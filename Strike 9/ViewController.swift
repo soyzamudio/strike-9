@@ -200,11 +200,11 @@ class ViewController: UIViewController {
 	}
 	
 	func rollDice() {
-		drawDice(1 + random() % 6, secondNumber: 1 + random() % 6)
+		drawDice(1 + random() % 45)
 	}
 	
-	func drawDice(firstNumber: NSNumber, secondNumber: NSNumber) {
-		total = Int(firstNumber) + Int(secondNumber)
+	func drawDice(number: NSNumber) {
+		total = Int(number)
 		getRandomButton.enabled = false
 		getRandomButton.backgroundColor = UIColor.whiteColor()
 		getRandomButton.layer.shadowColor = UIColor.lightGrayColor().CGColor
